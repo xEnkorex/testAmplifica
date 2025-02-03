@@ -25,7 +25,6 @@ class product extends Controller
 
     public function createProduct($name, $description, $price, $quantity)
     {
-        //idealmente hacer la validación de si el producto existe por el ID, pero por requerimiento se hace por el nombre
         $getProductResponse = Http::withHeaders([
             'Content-Type' => 'application/json',
             'X-Shopify-Access-Token' => env('SHOPIFY_ACCESS_TOKEN')
